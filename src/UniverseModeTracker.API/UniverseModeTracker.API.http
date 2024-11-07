@@ -1,0 +1,6 @@
+@UniverseModeTracker.API_HostAddress = http://localhost:5034
+
+GET {{UniverseModeTracker.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DAE27C77-9104-4AEC-A129-93FA4B29AF92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniverseModeTracker.Domain", "src\UniverseModeTracker.Domain\UniverseModeTracker.Domain.csproj", "{8C7E23E7-B683-4D29-8C82-9E30E026D3D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniverseModeTracker.DataAccess", "src\UniverseModeTracker.DataAccess\UniverseModeTracker.DataAccess.csproj", "{80544691-A84B-4873-8DE4-72000582AAF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniverseModeTracker.Common", "src\UniverseModeTracker.Common\UniverseModeTracker.Common.csproj", "{AE6FC242-28DA-45B9-978D-EB16E6DDFA56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniverseModeTracker.Application", "src\UniverseModeTracker.Application\UniverseModeTracker.Application.csproj", "{0990FB6C-4EB8-4B07-A8E3-63649E4E9137}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniverseModeTracker.API", "src\UniverseModeTracker.API\UniverseModeTracker.API.csproj", "{51FC599D-8E0E-49BC-834E-762DBB729272}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C7E23E7-B683-4D29-8C82-9E30E026D3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7E23E7-B683-4D29-8C82-9E30E026D3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7E23E7-B683-4D29-8C82-9E30E026D3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7E23E7-B683-4D29-8C82-9E30E026D3D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80544691-A84B-4873-8DE4-72000582AAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80544691-A84B-4873-8DE4-72000582AAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80544691-A84B-4873-8DE4-72000582AAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80544691-A84B-4873-8DE4-72000582AAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE6FC242-28DA-45B9-978D-EB16E6DDFA56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE6FC242-28DA-45B9-978D-EB16E6DDFA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE6FC242-28DA-45B9-978D-EB16E6DDFA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE6FC242-28DA-45B9-978D-EB16E6DDFA56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0990FB6C-4EB8-4B07-A8E3-63649E4E9137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0990FB6C-4EB8-4B07-A8E3-63649E4E9137}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0990FB6C-4EB8-4B07-A8E3-63649E4E9137}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0990FB6C-4EB8-4B07-A8E3-63649E4E9137}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51FC599D-8E0E-49BC-834E-762DBB729272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FC599D-8E0E-49BC-834E-762DBB729272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FC599D-8E0E-49BC-834E-762DBB729272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FC599D-8E0E-49BC-834E-762DBB729272}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C7E23E7-B683-4D29-8C82-9E30E026D3D7} = {DAE27C77-9104-4AEC-A129-93FA4B29AF92}
+		{80544691-A84B-4873-8DE4-72000582AAF2} = {DAE27C77-9104-4AEC-A129-93FA4B29AF92}
+		{AE6FC242-28DA-45B9-978D-EB16E6DDFA56} = {DAE27C77-9104-4AEC-A129-93FA4B29AF92}
+		{0990FB6C-4EB8-4B07-A8E3-63649E4E9137} = {DAE27C77-9104-4AEC-A129-93FA4B29AF92}
+		{51FC599D-8E0E-49BC-834E-762DBB729272} = {DAE27C77-9104-4AEC-A129-93FA4B29AF92}
+	EndGlobalSection
+EndGlobal
