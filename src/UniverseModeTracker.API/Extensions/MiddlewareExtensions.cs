@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using UniverseModeTracker.API.Middleware;
 
 namespace UniverseModeTracker.API.Extensions;
 
@@ -15,7 +16,7 @@ public static class MiddlewareExtensions
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Universe Mode Tracker API v1");
             });
         }
-
+        app.UseMiddleware<ExceptionHandlerMiddleware>();
         app.UseHttpsRedirection();
         app.UseRouting();
         app.UseAuthorization();
