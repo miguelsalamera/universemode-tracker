@@ -16,5 +16,14 @@ public class SuperstarConfiguration : IEntityTypeConfiguration<Superstar>
         builder.Property(property => property.RingName)
             .IsRequired()
             .HasMaxLength(250);
+
+        builder.Property(property => property.WinCount)
+            .IsRequired();
+        
+        builder.Property(property => property.LossCount)
+            .IsRequired();
+
+        builder.Property(property => property.NoContestCount)
+            .IsRequired();
     }
 }
