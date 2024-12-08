@@ -24,7 +24,6 @@ public class SuperstarController : ControllerBase
         return Ok(createdSuperstar);
     }
 
-    // GET: api/products/1
     [HttpGet("{id:guid}")]
     public async Task<IActionResult> GetSuperstarByIdAsync([FromRoute] Guid id)
     {
@@ -33,7 +32,6 @@ public class SuperstarController : ControllerBase
         return Ok(superstar); 
     }
 
-    // GET: api/products
     [HttpGet("all")]
     public async Task<IActionResult> GetAll()
     {
@@ -41,7 +39,6 @@ public class SuperstarController : ControllerBase
         return Ok(superstars); // Return a list of all products
     }
 
-    // PUT: api/products/1
     [HttpPut("{id:guid}")]
     public async Task<IActionResult> Update(Guid id, [FromBody] SuperstarUpdateDTO dto)
     {
@@ -56,7 +53,6 @@ public class SuperstarController : ControllerBase
         }
     }
 
-    // DELETE: api/products/1
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> Delete(Guid id)
     {
