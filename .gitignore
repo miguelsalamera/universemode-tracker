@@ -489,3 +489,6 @@ appsettings.Development.json
 
 # Database
 *.db
+
+# Visual Studio Code
+.vscode/
