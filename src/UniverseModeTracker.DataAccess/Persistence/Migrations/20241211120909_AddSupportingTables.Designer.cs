@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UniverseModeTracker.DataAccess.Persistence.Context;
 
@@ -10,9 +11,11 @@ using UniverseModeTracker.DataAccess.Persistence.Context;
 namespace UniverseModeTracker.DataAccess.Persistence.Migrations
 {
     [DbContext(typeof(DefaultDataContext))]
-    partial class DefaultDataContextModelSnapshot : ModelSnapshot
+    [Migration("20241211120909_AddSupportingTables")]
+    partial class AddSupportingTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
