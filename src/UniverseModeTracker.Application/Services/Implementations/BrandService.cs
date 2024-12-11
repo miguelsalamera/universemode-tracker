@@ -17,4 +17,12 @@ public class BrandService : IBrandService
         _mapper = mapper;
     }
 
+    public async Task<BrandCreateDTO> CreateBrandAsync(BrandCreateDTO dto)
+    {
+        var brand = _mapper.Map<Brand>(dto);
+
+        await _brandRepository.AddAsync(brand);
+
+        return _mapper.Map<BrandCreateDTO>(brand);
+    }
 }
