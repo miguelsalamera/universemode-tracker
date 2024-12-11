@@ -18,7 +18,7 @@ public class BrandController : ControllerBase
     [HttpPost("new")]
     public async Task<IActionResult> CreateBrand(BrandCreateDTO dto)
     {
-        var match = await _brandService.CreateBrandAsync(dto);
-        return Ok(match);
+        var brand = await _brandService.CreateBrandAsync(dto);
+        return Ok(brand);
     }
 }

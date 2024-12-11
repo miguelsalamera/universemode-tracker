@@ -2,6 +2,7 @@ using UniverseModeTracker.Application.DTOs.Superstar;
 using UniverseModeTracker.Domain.Entities;
 using AutoMapper;
 using UniverseModeTracker.Application.DTOs.Brand;
+using UniverseModeTracker.Application.DTOs.Match;
 
 
 namespace UniverseModeTracker.Application.Mapping;
@@ -17,5 +18,7 @@ public class MappingProfile : Profile
         CreateMap<Superstar, SuperstarUpdateDTO>().ReverseMap();
 
         CreateMap<Brand, BrandCreateDTO>().ReverseMap();
+
+        CreateMap<Show, ShowCreateDTO>().ReverseMap();
     }
 }
