@@ -21,7 +21,7 @@ public class CompetitorConfiguration : IEntityTypeConfiguration<Competitor>
 
         builder.HasOne(competitor => competitor.Corner)
             .WithMany(corner => corner.Competitors)
-            .HasForeignKey(competitor => competitor.Corner);
+            .HasForeignKey(competitor => competitor.CornerId);
     }
 }
 
