@@ -1,6 +1,5 @@
 using AutoMapper;
 using UniverseModeTracker.Domain.Entities;
-using UniverseModeTracker.DataAccess.Persistence.Context;
 using UniverseModeTracker.Application.Interfaces;
 using UniverseModeTracker.Application.DTOs.Superstar;
 using UniverseModeTracker.DataAccess.Repositories.Interfaces;
