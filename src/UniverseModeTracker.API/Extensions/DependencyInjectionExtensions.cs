@@ -13,6 +13,7 @@ public static class DependencyInjectionExtensions
         services.AddScoped<ISuperstarService, SuperstarService>();
         services.AddScoped<IMatchService, MatchService>();
         services.AddScoped<IBrandService, BrandService>();
+        services.AddScoped<IShowService, ShowService>();
 
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>)); 
         services.AddScoped<ISuperstarRepository, SuperstarRepository>();
