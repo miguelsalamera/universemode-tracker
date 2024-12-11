@@ -1,6 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UniverseModeTracker.Application.DTOs.Superstar;
 using UniverseModeTracker.Application.Interfaces;
 
