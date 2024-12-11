@@ -1,7 +1,7 @@
 using UniverseModeTracker.DataAccess.Repositories.Interfaces;
 using UniverseModeTracker.DataAccess.Repositories.Implementations;
-using UniverseModeTracker.Application.Interfaces;
-using UniverseModeTracker.Application.Services;
+using UniverseModeTracker.Application.Services.Implementations;
+using UniverseModeTracker.Application.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace UniverseModeTracker.API.Extensions;

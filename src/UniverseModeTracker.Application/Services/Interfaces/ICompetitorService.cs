@@ -1,6 +1,6 @@
 using UniverseModeTracker.Application.DTOs.Competitor;
 
-namespace UniverseModeTracker.Application.Interfaces;
+namespace UniverseModeTracker.Application.Services.Interfaces;
 
 public interface ICompetitorService
 {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using UniverseModeTracker.Application.DTOs.Superstar;
-using UniverseModeTracker.Application.Interfaces;
+using UniverseModeTracker.Application.Services.Interfaces;
 
 namespace UniverseModeTracker.API.Controllers;
 

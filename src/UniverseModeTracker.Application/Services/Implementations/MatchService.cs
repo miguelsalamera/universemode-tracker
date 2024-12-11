@@ -1,10 +1,10 @@
 using AutoMapper;
 using UniverseModeTracker.Domain.Entities;
-using UniverseModeTracker.Application.Interfaces;
+using UniverseModeTracker.Application.Services.Interfaces;
 using UniverseModeTracker.Application.DTOs.Match;
 using UniverseModeTracker.DataAccess.Repositories.Interfaces;
 
-namespace UniverseModeTracker.Application.Services;
+namespace UniverseModeTracker.Application.Services.Implementations;
 
 public class MatchService : IMatchService
 {

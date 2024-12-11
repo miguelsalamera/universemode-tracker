@@ -1,6 +1,6 @@
 using UniverseModeTracker.Application.DTOs.Corner;
 
-namespace UniverseModeTracker.Application.Interfaces;
+namespace UniverseModeTracker.Application.Services.Interfaces;
 
 public interface ICornerService
 {
