@@ -13,8 +13,6 @@ public class CompetitorConfiguration : IEntityTypeConfiguration<Competitor>
         _baseConfiguration.Configure(builder);
         _auditConfiguration.Configure(builder);
 
-        builder.HasKey(competitor => new { competitor.SuperstarId, competitor.CornerId });
-
         builder.HasOne(competitor => competitor.Superstar)
             .WithMany(superstar => superstar.Competitors)
             .HasForeignKey(competitor => competitor.SuperstarId);

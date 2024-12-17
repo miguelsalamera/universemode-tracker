@@ -47,7 +47,8 @@ namespace UniverseModeTracker.DataAccess.Persistence.Migrations
 
             modelBuilder.Entity("UniverseModeTracker.Domain.Entities.Competitor", b =>
                 {
-                    b.Property<Guid>("SuperstarId")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("CornerId")
@@ -64,9 +65,6 @@ namespace UniverseModeTracker.DataAccess.Persistence.Migrations
                         .HasColumnType("TEXT")
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                    b.Property<Guid>("Id")
-                        .HasColumnType("TEXT");
-
                     b.Property<bool>("IsManager")
                         .HasColumnType("INTEGER");
 
@@ -82,9 +80,14 @@ namespace UniverseModeTracker.DataAccess.Persistence.Migrations
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("SuperstarId", "CornerId");
+                    b.Property<Guid>("SuperstarId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("CornerId");
+
+                    b.HasIndex("SuperstarId");
 
                     b.ToTable("Competitors");
                 });

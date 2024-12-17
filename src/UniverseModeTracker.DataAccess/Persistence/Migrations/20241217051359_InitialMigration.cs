@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UniverseModeTracker.DataAccess.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class AddSupportingTables : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -25,6 +25,25 @@ namespace UniverseModeTracker.DataAccess.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Brands", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Superstars",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    RingName = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
+                    WinCount = table.Column<int>(type: "INTEGER", nullable: false),
+                    LossCount = table.Column<int>(type: "INTEGER", nullable: false),
+                    NoContestCount = table.Column<int>(type: "INTEGER", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
+                    LastModifiedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: false, defaultValueSql: "'SYSTEM'"),
+                    LastModifiedBy = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Superstars", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -101,12 +120,12 @@ namespace UniverseModeTracker.DataAccess.Persistence.Migrations
                 name: "Competitors",
                 columns: table => new
                 {
-                    SuperstarId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    CornerId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     IsManager = table.Column<bool>(type: "INTEGER", nullable: false),
                     IsPinfallScorer = table.Column<bool>(type: "INTEGER", nullable: false),
                     IsPinned = table.Column<bool>(type: "INTEGER", nullable: false),
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    SuperstarId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    CornerId = table.Column<Guid>(type: "TEXT", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
                     LastModifiedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
                     CreatedBy = table.Column<string>(type: "TEXT", nullable: false, defaultValueSql: "'SYSTEM'"),
@@ -114,7 +133,7 @@ namespace UniverseModeTracker.DataAccess.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Competitors", x => new { x.SuperstarId, x.CornerId });
+                    table.PrimaryKey("PK_Competitors", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Competitors_Corners_CornerId",
                         column: x => x.CornerId,
@@ -133,6 +152,11 @@ namespace UniverseModeTracker.DataAccess.Persistence.Migrations
                 name: "IX_Competitors_CornerId",
                 table: "Competitors",
                 column: "CornerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Competitors_SuperstarId",
+                table: "Competitors",
+                column: "SuperstarId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Corners_MatchId",
@@ -158,6 +182,9 @@ namespace UniverseModeTracker.DataAccess.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "Corners");
+
+            migrationBuilder.DropTable(
+                name: "Superstars");
 
             migrationBuilder.DropTable(
                 name: "Matches");
