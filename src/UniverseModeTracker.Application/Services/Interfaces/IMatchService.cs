@@ -4,5 +4,5 @@ namespace UniverseModeTracker.Application.Services.Interfaces;
 
 public interface IMatchService
 {
-    Task<MatchCreateDTO> CreateMatchAsync(MatchCreateDTO dto);
+    Task<bool> CreateMatchAsync(MatchCreateDTO dto);
 }
