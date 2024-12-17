@@ -18,6 +18,7 @@ public class MappingProfile : Profile
         CreateMap<Superstar, SuperstarUpdateDTO>().ReverseMap();
 
         CreateMap<Brand, BrandCreateDTO>().ReverseMap();
+        CreateMap<Brand, BrandGetAllDTO>().ReverseMap();
 
         CreateMap<Show, ShowCreateDTO>().ReverseMap();
     }

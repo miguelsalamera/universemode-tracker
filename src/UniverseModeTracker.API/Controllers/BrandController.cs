@@ -15,6 +15,13 @@ public class BrandController : ControllerBase
         _brandService = brandService;
     }
 
+    [HttpGet("all")]
+    public async Task<IActionResult> GetAll()
+    {
+        var brands = await _brandService.GetAllBrandsAsync();
+        return Ok(brands);
+    }
+
     [HttpPost("new")]
     public async Task<IActionResult> CreateBrand(BrandCreateDTO dto)
     {

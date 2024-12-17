@@ -25,4 +25,11 @@ public class BrandService : IBrandService
 
         return _mapper.Map<BrandCreateDTO>(brand);
     }
+
+    public async Task<IEnumerable<BrandGetAllDTO>> GetAllBrandsAsync()
+    {
+        var brandCollection = await _brandRepository.GetAllAsync();
+        
+        return _mapper.Map<IEnumerable<BrandGetAllDTO>>(brandCollection);
+    }
 }

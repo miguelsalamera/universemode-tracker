@@ -5,4 +5,5 @@ namespace UniverseModeTracker.Application.Services.Interfaces;
 public interface IBrandService
 {
     Task<BrandCreateDTO> CreateBrandAsync(BrandCreateDTO dto);
+    Task<IEnumerable<BrandGetAllDTO>> GetAllBrandsAsync();
 }
