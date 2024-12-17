@@ -33,6 +33,15 @@ public class Repository<T> : IRepository<T> where T : class
         return entity;
     }
 
+    public async Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities)
+    {
+        await _defaultDataContext.AddRangeAsync(entities);
+
+        await _defaultDataContext.SaveChangesAsync();
+
+        return entities;
+    }
+
     public async Task<T> UpdateAsync(T entity)
     {
         _defaultDataContext.Set<T>().Update(entity);
