@@ -52,4 +52,9 @@ public class Repository<T> : IRepository<T> where T : class
 
         return entity;
     }
+
+    public async Task SaveAsync()
+    {
+        await _defaultDataContext.SaveChangesAsync();
+    }
 }
